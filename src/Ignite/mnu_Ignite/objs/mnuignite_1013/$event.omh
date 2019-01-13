@@ -1,0 +1,5 @@
+;
+No/Yes message Attenzione {Chiudere le librerie?}
+If flag true
+	Do $itasks.Ignite.$closeOpenedLibs()
+End If

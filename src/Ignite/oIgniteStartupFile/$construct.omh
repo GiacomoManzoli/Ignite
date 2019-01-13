@@ -1,0 +1,7 @@
+;  Enter your initialization code here
+
+Calculate ikcFilePath as pcFilePath
+Send to trace log {Ignite Config: [ikcFilePath]}
+
+Do method createIfNotExists
+Do $cinst.$_loadFileContent()

@@ -1,0 +1,13 @@
+;
+Do loGetRequest.$doGet(ckRemoteUrl)
+;  Breakpoint
+Calculate lrResponseRow as loGetRequest.$getResponseRow()
+Calculate llDownloadedList as lrResponseRow.libs
+
+For llDownloadedList.$line from 1 to llDownloadedList.$linecount step 1
+	Do llLibsList.$add()
+	Calculate lrRow as llDownloadedList.[llDownloadedList.$line].1
+	Do llLibsList.[llLibsList.$linecount].$assignrow(lrRow,kTrue)
+End For
+;  Breakpoint
+Quit method llLibsList

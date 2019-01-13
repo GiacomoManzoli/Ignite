@@ -1,0 +1,30 @@
+{
+	"ident": 1019,
+	"order": 16387,
+	"objtype": "kText",
+	"properties": {
+		"align": "kLeftJst",
+		"backcolor": "kColorBackFill",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "",
+		"font": 5,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"forecolor": "kColorForeFill",
+		"height": 30,
+		"left": 9,
+		"objlink": 0,
+		"text": {
+			"type": 14,
+			"calc": "Apertura in corso... \r[icCurrentPath]"
+		},
+		"textcolor": "kColorWindowText",
+		"top": 58,
+		"userinfo": "",
+		"vertcentertext": false,
+		"visible": true,
+		"width": 366
+	}
+}

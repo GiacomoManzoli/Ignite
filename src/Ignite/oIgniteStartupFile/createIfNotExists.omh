@@ -1,0 +1,13 @@
+;
+Do code method ccFSutils/makeDir (ikcFilePath)
+
+
+Do FileOps.$doesfileexist(ikcFilePath) Returns lbConfigExists
+If not(lbConfigExists)
+	Do $cinst.$createfile(ikcFilePath) Returns lbOK
+End If
+Do $cinst.$openfile(ikcFilePath) Returns lbOK
+If not(lbOK)
+	Send to trace log {Errore nella creazione del file [ikcFilePath]}
+	Quit method kFalse
+End If

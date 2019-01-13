@@ -1,0 +1,76 @@
+[
+	{
+		"name": "$construct",
+		"ident": 1,
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$setTitle",
+		"ident": 3,
+		"order": 2,
+		"pvardefs": [
+			{
+				"name": "pcMenuName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"ident": 2,
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$addItem",
+		"ident": 0,
+		"order": 4,
+		"pvardefs": [
+			{
+				"name": "pcMenuName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1,
+				"desc": "Nome dell'item da aggiungere"
+			},
+			{
+				"name": "pcSubMenuClass",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2,
+				"desc": "Classname (Lib.Class) del sottomenù da istanziare"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirMenu",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	}
+]

@@ -1,0 +1,10 @@
+;
+For ilOpenLibrariesList.$line from ilOpenLibrariesList.$linecount to 1 step -1
+	If not(isnull($libs.$findname(ilOpenLibrariesList.LibName)))&ilOpenLibrariesList.LibName<>$clib().$name
+		Close library {[ilOpenLibrariesList.LibName]}
+	End If
+	Do ilOpenLibrariesList.[ilOpenLibrariesList.$line].$selected.$assign(kTrue)
+End For
+Do ilOpenLibrariesList.$search($ref.LibName=$clib().$name,1,0,0,0) Returns lnLine
+Do ilOpenLibrariesList.[lnLine].$selected.$assign(kFalse)
+Do ilOpenLibrariesList.$remove(kListDeleteSelected)

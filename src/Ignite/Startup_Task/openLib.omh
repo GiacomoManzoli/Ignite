@@ -1,0 +1,5 @@
+;
+Open library (Do not close others,Enable conversion by runtime,Convert without user prompts) {[pcLibPath]}
+If not(isclear(#ERRTEXT))
+	Send to trace log {[#ERRTEXT]}
+End If

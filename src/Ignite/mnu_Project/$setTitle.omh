@@ -1,0 +1,3 @@
+Calculate icMenuName as pcMenuName
+Calculate $cinst.$name as icMenuName
+Calculate $cinst.$title as icMenuName

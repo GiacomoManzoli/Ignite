@@ -1,0 +1,12 @@
+Do method isRelative (pcRelativePath) Returns lbIsRelative
+If lbIsRelative
+	Do method getDirFromFilePath (pcWorkingDir) Returns pcWorkingDir
+	Calculate lcAbsPath as replace(pcRelativePath,'.',pcWorkingDir)
+	Calculate lcAbsPath as replaceall(lcAbsPath,'//','/')
+	If pathsep()<>'/'
+		Calculate lcAbsPath as replaceall(lcAbsPath,'/',pathsep())
+	End If
+Else
+	Calculate lcAbsPath as ''
+End If
+Quit method lcAbsPath

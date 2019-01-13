@@ -1,0 +1,4 @@
+;
+Calculate iirProgressBar.$::max as pnMax
+Calculate iirProgressBar.$::min as 0
+Calculate iirProgressBar.$val as 0

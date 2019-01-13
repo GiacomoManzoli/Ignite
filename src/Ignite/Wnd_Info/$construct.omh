@@ -1,0 +1,7 @@
+;  Enter your initialization code here
+Calculate ilInfo as plnfo
+Calculate icLibName as $clib().$name
+Calculate icVersion as $itasks.Ignite.$getVersion()
+Calculate $cwind.$title as con(icLibName,' - v.',icVersion)
+
+Calculate ibPrivate as $itasks.Ignite.$getFlagPrivate()

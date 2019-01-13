@@ -1,0 +1,36 @@
+{
+	"classtype": "kMenu",
+	"internalversion": 8,
+	"designtaskname": "Startup_Task",
+	"nextident": 1019,
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2019-01-10 23:17:34",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"enabled": true,
+		"external": true,
+		"helpfile": 0,
+		"helptext": "",
+		"inheritedorder": 0,
+		"issupercomponent": false,
+		"moddate": "2019-01-11 00:47:25",
+		"showascheckedout": false,
+		"title": {
+			"type": 0,
+			"calc": "Ignite"
+		},
+		"userinfo": "",
+		"users": "12345678",
+		"version": ""
+	}
+}

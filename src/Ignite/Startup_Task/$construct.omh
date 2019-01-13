@@ -1,0 +1,22 @@
+;
+Calculate $clib.$name as 'Temp'
+Calculate $clib.$name as 'Ignite'
+Calculate $cinst.$name as 'Ignite'
+
+Calculate ckRemoteUrl as 'https://raw.githubusercontent.com/GiacomoManzoli/IgniteTest/master/ignite.config.json'
+Calculate ibLibraryPrivate as kTrue
+
+
+
+Do method $loadConfigPath Returns lbOK
+If not(lbOK)
+	OK message Errore! {File di configurazione assente!}
+	Do $cinst.$close()
+End If
+Do ioConfigFile.$getProjectName() Returns lcName
+Do $menus.mnu_Project.$openonce('*',kUsermenu) Returns lirMainMenu
+Do lirMainMenu.$setTitle(lcName)
+Do lirMainMenu.$addItem('Ignite','Ignite.mnu_Ignite')
+
+
+Do method $openLibs

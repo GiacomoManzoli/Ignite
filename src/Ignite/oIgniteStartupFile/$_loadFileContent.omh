@@ -1,0 +1,17 @@
+;
+Do $cinst.$readcharacter(kUniTypeUTF8,lcFileContent) Returns lbOK
+If lcFileContent<>''
+	
+	Do OJSON.$jsontolistorrow(lcFileContent,%%err,kTrue) Returns lrResponseRow
+	Calculate llLibsList as lrResponseRow.Libs
+	
+	Calculate ikcProjectName as lrResponseRow.ProjectName
+	Calculate ikcBaseDir as lrResponseRow.BaseDir
+	Do code method ccFSutils/resolveRelativePath (ikcBaseDir,ikcFilePath) Returns ikcBaseDir
+	For llLibsList.$line from 1 to llLibsList.$linecount step 1
+		Do ilLibsList.$add()
+		Calculate lrRow as llLibsList.[llLibsList.$line].1
+		Do method setFilePath (lrRow)
+		Do ilLibsList.[ilLibsList.$linecount].$assignrow(lrRow,kTrue)
+	End For
+End If

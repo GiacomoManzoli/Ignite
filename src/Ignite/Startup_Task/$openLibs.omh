@@ -1,0 +1,31 @@
+;
+Do ioConfigFile.$getLibList() Returns llLIbList
+Do $windows.Wnd_Ignite.$openmodal('*',kWindowCenter) Returns lirWnd
+Do lirWnd.$bringinfront
+Do lirWnd.$initProgressBar(llLIbList.$linecount)
+
+Do llPathList.$define()
+Do llPathList.$cols.$add('Path',kCharacter,kSimplechar)
+
+For llLIbList.$line from 1 to llLIbList.$linecount step 1
+	Calculate lcLibPath as llLIbList.FilePath
+	Do lirWnd.$setCurrentPath(lcLibPath)
+	Do FileOps.$doesfileexist(lcLibPath) Returns lbFileExists
+	If lbFileExists
+		Do method openLib (lcLibPath)
+		Do llPathList.$add(lcLibPath)
+		Do lirWnd.$incProgress()
+	Else
+		Send to trace log {Errore! Impossibile aprire la libreria [lcLibPath]}
+		Yes/No message Errore! {Non è stato possibile aprire la libreria [lcLibPath]. Interrompere l'avvio?}
+		If flag true
+			Do lirWnd.$close()
+			Quit method
+		End If
+	End If
+End For
+
+Do method setOpenLibrariesList (llPathList)
+Do $cinst.$setLibrariesPrivate(ibLibraryPrivate)
+
+Do lirWnd.$close()

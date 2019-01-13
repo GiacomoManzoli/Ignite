@@ -1,0 +1,8 @@
+;
+Calculate ibLibraryPrivate as pbPrivate
+For ilOpenLibrariesList.$line from 1 to ilOpenLibrariesList.$linecount step 1
+	Calculate lcLibName as ilOpenLibrariesList.LibName
+	If lcLibName<>$clib().$name
+		Do $libs.[lcLibName].$isprivate.$assign(pbPrivate)
+	End If
+End For

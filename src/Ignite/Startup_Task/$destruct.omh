@@ -1,0 +1,4 @@
+Yes/No message Chiusura [$clib().$name] (Icon) {Chiudre anche le librerie aperte?}
+If flag true
+	Do $cinst.$closeOpenedLibs()
+End If

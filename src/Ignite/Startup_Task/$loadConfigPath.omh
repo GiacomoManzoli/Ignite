@@ -1,0 +1,18 @@
+;
+Calculate ikcConfigPath as $cclass.$userinfo
+If isclear(ikcConfigPath)
+	Do code method ccFSutils/getDirFromFilePath ($clib.$pathname) Returns lcCurrentDir
+	Calculate ikcConfigPath as con(lcCurrentDir,ckDefaultConfigName)
+	Do FileOps.$doesfileexist(ikcConfigPath) Returns lbExsists
+	If not(lbExsists)
+		Do FileOps.$putfilename(lcCurrentDir,'Seleziona il file di configurazione','JSON|*.json') Returns lbOK
+		If not(lbOK)|isclear(ikcConfigPath)
+			Quit method kFalse
+		End If
+	End If
+	Calculate $cclass.$userinfo as ikcConfigPath
+	Do ioConfigFile.$deleteref()
+End If
+
+Do $objects.oIgniteStartupFile.$newref(ikcConfigPath) Returns ioConfigFile
+Quit method kTrue

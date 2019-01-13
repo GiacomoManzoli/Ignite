@@ -1,0 +1,6 @@
+;  called by the client worker with the results
+Calculate irResponse as pRow
+Calculate irResponseHeaders as pRow.responseHeaders
+Do utf8tochar(pRow.responseContent) Returns %%resp
+Do OJSON.$formatjson(pRow.responseContent) Returns icReturnStr
+Do OJSON.$jsontolistorrow(pRow.responseContent,%%error,kTrue) Returns irJSONRow

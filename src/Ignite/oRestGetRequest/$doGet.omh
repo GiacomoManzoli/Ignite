@@ -1,0 +1,10 @@
+
+Calculate lcBody as ''
+
+Do $cinst.$init(pcUrl,kOWEBhttpMethodGet,ilHeadersList,lcBody)
+Calculate %%ET as $cinst.$errortext
+Calculate %%EC as $cinst.$errorcode
+Do $cinst.$run() Returns lbOK     ;; Run è sincrono, Start è asincrono
+If not(lbOK)
+	Breakpoint
+End If

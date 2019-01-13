@@ -1,0 +1,2 @@
+Calculate lcRelativeStart as con('.',sys(9))
+Quit method pos(lcRelativeStart,pcPath)=1|pcPath="."

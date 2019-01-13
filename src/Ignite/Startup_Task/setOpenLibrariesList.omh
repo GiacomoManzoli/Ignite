@@ -1,0 +1,21 @@
+;
+
+;  Se itero sulle librerie aperte non ho modo di arrivare allo startuptask
+Do $itasks.$makelist($ref,$ref.$lib().$pathname,$ref.$lib().$name) Returns ilOpenLibrariesList
+Do ilOpenLibrariesList.$cols.2.$name.$assign('LibPath')
+Do ilOpenLibrariesList.$cols.3.$name.$assign('LibName')
+Do ilOpenLibrariesList.$cols.$add('Version',kCharacter,kSimplechar)
+Do ilOpenLibrariesList.$sendall($ref.Version.$assign($sendallref.1.$getVersion()),$ref.1.$getVersion.$cando())
+
+Do plOpenedPathList.$add($clib.$pathname)
+
+For ilOpenLibrariesList.$line from 1 to ilOpenLibrariesList.$linecount step 1
+	Do plOpenedPathList.$search($ref.Path=ilOpenLibrariesList.LibPath,1,0,0,0) Returns lnLine
+	If lnLine<>0
+		Do ilOpenLibrariesList.[ilOpenLibrariesList.$line].$selected.$assign(kTrue)
+	End If
+End For
+Do
+Do ilOpenLibrariesList.$remove(kListKeepSelected)
+Do ilOpenLibrariesList.$cols.$remove(1)
+Do ilOpenLibrariesList.$cols.LibPath.$removeduplicates(kFalse)

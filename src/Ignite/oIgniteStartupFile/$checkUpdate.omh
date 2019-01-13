@@ -1,0 +1,10 @@
+;
+;  Seleziono le librerie che sono già presenti
+Do plRemoteConfig.$search(kFalse)
+For ilLibsList.$line from 1 to ilLibsList.$linecount step 1
+	Do plRemoteConfig.$search($ref.Name=ilLibsList.Name&$ref.Version=ilLibsList.Version,1,0,1,0)
+End For
+;  Le cancello dai download
+Do plRemoteConfig.$remove(kListDeleteSelected)
+
+Quit method plRemoteConfig

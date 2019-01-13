@@ -1,0 +1,2 @@
+Calculate icCurrentPath as pcPath
+Do $cinst.$redraw(1,1,1)

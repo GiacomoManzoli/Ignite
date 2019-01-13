@@ -1,0 +1,2 @@
+Do FileOps.$splitpathname(pcPath,%%drive,%%dir,%%_,%%_)
+Quit method con(%%drive,%%dir)

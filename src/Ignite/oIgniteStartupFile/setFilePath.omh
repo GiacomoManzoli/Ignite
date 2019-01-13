@@ -1,0 +1,17 @@
+;
+If isnull(pfrLibraryRow.$cols.$findname('FilePath'))
+	Do pfrLibraryRow.$cols.$add('FilePath',kCharacter,kSimplechar)
+End If
+If isclear(pfrLibraryRow.FilePath)
+	Calculate pfrLibraryRow.FilePath as con(ikcBaseDir,pfrLibraryRow.Name,'.lbs')
+Else
+	Do code method ccFSutils/isRelative (pfrLibraryRow.FilePath) Returns lbIsRelative
+	If lbIsRelative
+		Do code method ccFSutils/resolveRelativePath (pfrLibraryRow.FilePath,ikcBaseDir) Returns pfrLibraryRow.FilePath
+	End If
+	
+	Do code method ccFSutils/getFileNameFromFilePath (pfrLibraryRow.FilePath) Returns lcFileName
+	If isclear(lcFileName)
+		Calculate pfrLibraryRow.FilePath as con(pfrLibraryRow.FilePath,pfrLibraryRow.Name,'.lbs')
+	End If
+End If

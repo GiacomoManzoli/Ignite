@@ -1,0 +1,7 @@
+
+
+Do FileOps.$doesfileexist(pcPath) Returns lbExist
+If not(lbExist)
+	Do method makeDir (FileOps.$parentdir(pcPath))
+	Do FileOps.$createdir(pcPath)
+End If

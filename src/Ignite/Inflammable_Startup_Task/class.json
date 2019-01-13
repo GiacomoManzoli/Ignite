@@ -1,0 +1,34 @@
+{
+	"classtype": "kTask",
+	"internalversion": 9,
+	"tvardefs": [
+
+	],
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "ikcLibVersion",
+			"order": 1,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2019-01-10 23:54:35",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2019-01-11 00:14:58",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": ""
+	}
+}

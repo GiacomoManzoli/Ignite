@@ -1,0 +1,10 @@
+;
+;
+;  Do method downloadRemoteConfig Returns llLibsList
+;
+;  Do ioConfigFile.$checkUpdate(llLibsList) Returns llDownloadList
+;
+;  If llDownloadList.$linecount>0
+;  Do method downloadUpdate (llDownloadList)
+;  End If
+;  Breakpoint

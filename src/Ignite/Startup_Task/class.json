@@ -1,0 +1,84 @@
+{
+	"classtype": "kTask",
+	"internalversion": 98,
+	"tvardefs": [
+
+	],
+	"cvardefs": [
+		{
+			"name": "ckDefaultConfigName",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'ignite.config.json'"
+		},
+		{
+			"name": "ckIgniteLibFolderName",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ckRemoteUrl",
+			"order": 1,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ckVersion",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'1.0.0-alpha'"
+		}
+	],
+	"ivardefs": [
+		{
+			"name": "ibLibraryPrivate",
+			"order": 5,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "ikcConfigPath",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ilOpenLibrariesList",
+			"order": 4,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ioConfigFile",
+			"order": 1,
+			"type": "kObjectref",
+			"subtype": "oIgniteStartupFile",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2019-01-10 21:31:07",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": false,
+		"issupercomponent": false,
+		"moddate": "2019-01-12 19:25:30",
+		"showascheckedout": false,
+		"userinfo": "/Users/gmanzoli/Dropbox/Ignite/ignite.config.json",
+		"version": ""
+	}
+}
