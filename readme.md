@@ -2,6 +2,8 @@
 
 Multi-library start-up utility for Omnis project.
 
+![](https://raw.githubusercontent.com/GiacomoManzoli/Ignite/master/res/wnd_info.png)
+
 ## Configuration and usage
 
 At the startup, Ignite looks for a file `ignite.config.json` in the same folder of the library. If there isn't a configuration file, it asks a filepath and store the info in the `$userinfo` property of `Startup_Task`.
