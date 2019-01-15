@@ -6,6 +6,11 @@ If lcFileContent<>''
 	Calculate llLibsList as lrResponseRow.Libs
 	
 	Calculate ikcProjectName as lrResponseRow.ProjectName
+	Calculate ikbOpenPrivate as lrResponseRow.OpenAsPrivate
+	If isnull(ikbOpenPrivate)
+		Calculate ikbOpenPrivate as kFalse
+	End If
+	
 	Calculate ikcBaseDir as lrResponseRow.BaseDir
 	Do code method ccFSutils/resolveRelativePath (ikcBaseDir,ikcFilePath) Returns ikcBaseDir
 	For llLibsList.$line from 1 to llLibsList.$linecount step 1

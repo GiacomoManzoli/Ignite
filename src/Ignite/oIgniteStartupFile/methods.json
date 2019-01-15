@@ -202,9 +202,21 @@
 		]
 	},
 	{
+		"name": "--- getters",
+		"ident": 8,
+		"order": 7,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
 		"name": "$getLibList",
 		"ident": 5,
-		"order": 7,
+		"order": 8,
 		"pvardefs": [
 
 		],
@@ -215,7 +227,18 @@
 	{
 		"name": "$getProjectName",
 		"ident": 7,
-		"order": 8,
+		"order": 9,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$getOpenAsPrivate",
+		"ident": 9,
+		"order": 10,
 		"pvardefs": [
 
 		],

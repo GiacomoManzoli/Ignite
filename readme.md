@@ -10,6 +10,7 @@ In the configuration file it's possible to define:
 
 * `ProjectName`: the `$name` property of the Ignite menù;
 * `BaseDir`: the relative path from the `Ignite.lbs` folder to the directory containg the libraries;  optional, the default value it's the same dir (`.`).
+* `OpenAsPrivate`: boolean flag, if true the libraries are opened as private
 * `Libs`: libraries to open. The libraries are open on the same order as the list.
 	* `Name`: name of the `.lbs` file.
 	* `FilePath`: optional, the relative (from `BaseDir`) or absolute filepath to the `.lbs` file. 
@@ -22,6 +23,7 @@ In the configuration file it's possible to define:
 {
     "ProjectName": "TestProject",
     "BaseDir": "./Test/",
+    "OpenAsPrivate": false,
     "Libs": [
         {
             "Name": "Library1",

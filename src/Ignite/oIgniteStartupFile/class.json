@@ -1,12 +1,19 @@
 {
 	"classtype": "kObjectclass",
-	"internalversion": 30,
+	"internalversion": 33,
 	"superclass": ".FileOps.FileOps",
 	"designtaskname": "Startup_Task",
 	"cvardefs": [
 
 	],
 	"ivardefs": [
+		{
+			"name": "ikbOpenPrivate",
+			"order": 5,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
 		{
 			"name": "ikcBaseDir",
 			"order": 3,
@@ -46,7 +53,7 @@
 		"editordata": "",
 		"external": true,
 		"issupercomponent": false,
-		"moddate": "2019-01-12 19:18:31",
+		"moddate": "2019-01-15 20:22:16",
 		"selfcontained": false,
 		"showascheckedout": false,
 		"userinfo": "",

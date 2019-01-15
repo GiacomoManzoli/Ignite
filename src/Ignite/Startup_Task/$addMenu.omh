@@ -1,0 +1,4 @@
+;
+If not(isclear(iirMainMenu))
+	Do iirMainMenu.$addItem(pcMenuName,pcClassName)
+End If

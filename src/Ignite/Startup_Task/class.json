@@ -1,6 +1,6 @@
 {
 	"classtype": "kTask",
-	"internalversion": 98,
+	"internalversion": 102,
 	"tvardefs": [
 
 	],
@@ -45,6 +45,13 @@
 			"sublen": 0
 		},
 		{
+			"name": "iirMainMenu",
+			"order": 3,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
 			"name": "ikcConfigPath",
 			"order": 2,
 			"type": "kCharacter",
@@ -76,9 +83,9 @@
 		"editordata": "",
 		"external": false,
 		"issupercomponent": false,
-		"moddate": "2019-01-12 19:25:30",
+		"moddate": "2019-01-15 20:21:16",
 		"showascheckedout": false,
-		"userinfo": "/Users/gmanzoli/Dropbox/Ignite/ignite.config.json",
+		"userinfo": "/Users/gmanzoli/Dropbox/OmnisDevTools/ignite.config.json",
 		"version": ""
 	}
 }

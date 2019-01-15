@@ -14,9 +14,9 @@ If not(lbOK)
 	Do $cinst.$close()
 End If
 Do ioConfigFile.$getProjectName() Returns lcName
-Do $menus.mnu_Project.$openonce('*',kUsermenu) Returns lirMainMenu
-Do lirMainMenu.$setTitle(lcName)
-Do lirMainMenu.$addItem('Ignite','Ignite.mnu_Ignite')
+Do $menus.mnu_Project.$openonce('*',kUsermenu) Returns iirMainMenu
+Do iirMainMenu.$setTitle(lcName)
+Do iirMainMenu.$addItem('Ignite','Ignite.mnu_Ignite')
 
 
 Do method $openLibs

@@ -26,6 +26,7 @@ For llLIbList.$line from 1 to llLIbList.$linecount step 1
 End For
 
 Do method setOpenLibrariesList (llPathList)
-Do $cinst.$setLibrariesPrivate(ibLibraryPrivate)
-
+If ioConfigFile.$getOpenAsPrivate()
+	Do $cinst.$setLibrariesPrivate(ibLibraryPrivate)
+End If
 Do lirWnd.$close()

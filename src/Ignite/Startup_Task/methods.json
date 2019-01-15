@@ -8,20 +8,6 @@
 		],
 		"lvardefs": [
 			{
-				"name": "%%dir",
-				"order": 5,
-				"type": "kCharacter",
-				"subtype": "kSimplechar",
-				"sublen": 100000000
-			},
-			{
-				"name": "%%drive",
-				"order": 4,
-				"type": "kCharacter",
-				"subtype": "kSimplechar",
-				"sublen": 100000000
-			},
-			{
 				"name": "lbOK",
 				"order": 3,
 				"type": "kBoolean",
@@ -34,27 +20,6 @@
 				"type": "kCharacter",
 				"subtype": "kSimplechar",
 				"sublen": 100000000
-			},
-			{
-				"name": "lirMainMenu",
-				"order": 6,
-				"type": "kItemref",
-				"subtype": "",
-				"sublen": 0
-			},
-			{
-				"name": "llDownloadList",
-				"order": 2,
-				"type": "kList",
-				"subtype": "sLibraryConfig",
-				"sublen": 0
-			},
-			{
-				"name": "llLibsList",
-				"order": 1,
-				"type": "kList",
-				"subtype": "sLibraryConfig",
-				"sublen": 0
 			}
 		]
 	},
@@ -169,7 +134,7 @@
 	{
 		"name": "-- Update",
 		"ident": 8,
-		"order": 9,
+		"order": 8,
 		"pvardefs": [
 
 		],
@@ -181,7 +146,7 @@
 	{
 		"name": "checkDownload",
 		"ident": 10,
-		"order": 10,
+		"order": 9,
 		"pvardefs": [
 
 		],
@@ -192,7 +157,7 @@
 	{
 		"name": "downloadRemoteConfig",
 		"ident": 2,
-		"order": 11,
+		"order": 10,
 		"pvardefs": [
 
 		],
@@ -237,7 +202,7 @@
 	{
 		"name": "downloadUpdate",
 		"ident": 3,
-		"order": 12,
+		"order": 11,
 		"pvardefs": [
 			{
 				"name": "plDwnloadList",
@@ -261,7 +226,7 @@
 	{
 		"name": "-- Open",
 		"ident": 9,
-		"order": 13,
+		"order": 12,
 		"pvardefs": [
 
 		],
@@ -273,7 +238,7 @@
 	{
 		"name": "$openInfo",
 		"ident": 18,
-		"order": 14,
+		"order": 13,
 		"pvardefs": [
 
 		],
@@ -284,7 +249,7 @@
 	{
 		"name": "$openLibs",
 		"ident": 11,
-		"order": 15,
+		"order": 14,
 		"pvardefs": [
 
 		],
@@ -329,7 +294,7 @@
 	{
 		"name": "openLib",
 		"ident": 12,
-		"order": 16,
+		"order": 15,
 		"pvardefs": [
 			{
 				"name": "pcLibPath",
@@ -347,7 +312,7 @@
 	{
 		"name": "setOpenLibrariesList",
 		"ident": 14,
-		"order": 17,
+		"order": 16,
 		"pvardefs": [
 			{
 				"name": "plOpenedPathList",
@@ -399,7 +364,7 @@
 	{
 		"name": "$getOpenLibs",
 		"ident": 16,
-		"order": 18,
+		"order": 17,
 		"pvardefs": [
 
 		],
@@ -410,7 +375,7 @@
 	{
 		"name": "$closeOpenedLibs",
 		"ident": 17,
-		"order": 19,
+		"order": 18,
 		"pvardefs": [
 
 		],
@@ -427,7 +392,7 @@
 	{
 		"name": "$setLibrariesPrivate",
 		"ident": 19,
-		"order": 20,
+		"order": 19,
 		"pvardefs": [
 			{
 				"name": "pbPrivate",
@@ -451,9 +416,49 @@
 	{
 		"name": "$getFlagPrivate",
 		"ident": 20,
+		"order": 20,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "-- Menu",
+		"ident": 6,
 		"order": 21,
 		"pvardefs": [
 
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$addMenu",
+		"ident": 21,
+		"order": 22,
+		"pvardefs": [
+			{
+				"name": "pcMenuName",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1,
+				"desc": "Nome del menu da istanziare"
+			},
+			{
+				"name": "pcClassName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2,
+				"desc": "Classname del menu da istanziare"
+			}
 		],
 		"lvardefs": [
 
